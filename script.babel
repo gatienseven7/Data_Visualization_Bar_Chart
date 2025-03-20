@@ -34,13 +34,13 @@ fetch(
       .domain([0, d3.max(dataArray, (d) => d[1])])
       .range([height, 0]);
 
-    // Créer l'axe X avec un format de date
+   
     const xAxis = d3
       .axisBottom(xScale)
       .ticks(5)
       .tickFormat(d3.timeFormat("%Y"));
 
-    // Ajouter l'axe X à l'SVG
+   
     svg
       .append("g")
       .attr("id", "x-axis")
@@ -49,10 +49,10 @@ fetch(
       .selectAll(".tick")
       .attr("class", "tick");
 
-    // Créer l'axe Y
+    
     const yAxis = d3.axisLeft(yScale).ticks(5);
 
-    // Ajouter l'axe Y à l'SVG
+    
     svg
       .append("g")
       .attr("id", "y-axis")
