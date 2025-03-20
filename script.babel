@@ -5,7 +5,7 @@ let dataArray = [];
 fetch(
   "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json"
 )
-  .then((response) => response.json()) // Corriger "reponse" en "response"
+  .then((response) => response.json()) 
   .then((data) => {
     dataArray = data.data;
 
@@ -65,7 +65,7 @@ fetch(
       .attr("id", "tooltip")
       .style("opacity", 0);
 
-    // Ajouter les barres représentant les données
+    
     svg
       .selectAll(".bar")
       .data(dataArray)
